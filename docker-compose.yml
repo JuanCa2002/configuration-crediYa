@@ -50,6 +50,7 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./local_environment/db_scripts:/docker-entrypoint-initdb.d:ro
 
 volumes:
   postgres_data:
